@@ -180,7 +180,15 @@ console.log(filteredFood);
 
 //CODE HERE
 
-
+const filterByProperty = (property, number, type) => {
+    let filteredArr = []
+    if(type === "above"){
+    filteredArr = foodArr.filter(( fooObj ) => fooObj[property] > number)
+    } else{
+        filteredArr = foodArr.filter(( fooObj ) => fooObj[property] < number)
+    }
+    return filteredArr
+}
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
